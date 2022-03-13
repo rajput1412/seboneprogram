@@ -1,0 +1,49 @@
+package hello;
+import java.util.*;
+public class palindrome {
+	public boolean pal(int n){
+		int c,r=0;
+		c=n;
+		while(n!=0)
+		{
+			
+			r=r*10+n%10;
+			n=n/10;
+			
+			
+		}
+		if(r==c)
+		{
+			return true;
+//			System.out.println("No is Palindrome");
+		}
+		else
+		{
+			return false;
+			
+			//System.out.println("No is not Palindrome");
+		}
+		
+
+		
+		
+	
+	}
+	
+	
+	public static void main(String args[])
+	{
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter A nomber=>");
+		int n=sc.nextInt();
+		palindrome p=new palindrome();
+		if(p.pal(n)){
+			System.out.println("no Is palindrome");
+		}	
+		else 
+			System.out.println("Not Palindrome");
+	
+	}
+
+}
